@@ -1,0 +1,8 @@
+[init]
+	defaultBranch = main
+[user]
+	email = email
+	name = username
+[core]
+	editor = code --wait
+	autocrlf = input
