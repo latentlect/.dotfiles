@@ -124,6 +124,6 @@ install_fzf(){
 install_fzf
 download_nerdfonts
 install_vscode
-install_neovim
-install_lvim
+# install_neovim
+# install_lvim
 install_auto_cpufreq
