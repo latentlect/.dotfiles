@@ -2,6 +2,9 @@
 # --downloader aria2c --downloader-args aria2c:'-c -j 3 -x 3 -s 3 -k 1M'
 --downloader aria2c
 
+# SponsorBlock categories to create chapters
+--sponsorblock-mark all
+
 # Select file with mp4 extension
 -f "[ext=mp4]"
 
