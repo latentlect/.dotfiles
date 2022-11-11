@@ -114,6 +114,24 @@ install_fzf(){
 }
 
 
+setup_tmux(){
+    if command -v tmux > /dev/null; then
+        sudo apt-get install entr -y
+        git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+        if [ -f "$HOME/.tmux.conf" ]; then
+            # type this in terminal if tmux is already running
+            tmux source ~/.tmux.conf
+        fi
+        # if [ -d "$HOME/.tmux/plugins/tmp/tpm" ]; then
+        #     tmux run '~/.tmux/plugins/tpm/tpm'
+        # fi
+        # tmux prefix: ctrl + b
+        # Press prefix + I (capital i, as in Install) to fetch the plugin.
+        # Press prefix + alt + u (lowercase u as in uninstall) to remove the plugin.
+    fi
+}
+
+
 # install these packages when
 # MPEG-4 and H.264 (High Profile) decoders are required
 # gstreamer1.0-libav
@@ -124,6 +142,7 @@ install_fzf(){
 install_fzf
 download_nerdfonts
 install_vscode
+setup_tmux
 # install_neovim
 # install_lvim
 install_auto_cpufreq
