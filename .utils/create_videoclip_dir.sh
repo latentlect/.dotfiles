@@ -14,5 +14,3 @@ create_mpv_videoclip_dir(){
 
 
 create_mpv_videoclip_dir
-
-
