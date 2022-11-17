@@ -8,7 +8,8 @@ local categories = {
     prologue = "^Prologue/^Intro",
     opening = "^OP/ OP$/^Opening",
     ending = "^ED/ ED$/^Ending",
-    preview = "Preview$"
+    preview = "Preview$",
+    ads = "%SponsorBlock"
 }
 
 local options = {

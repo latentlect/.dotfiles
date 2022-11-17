@@ -19,7 +19,7 @@ local picture_in_picture_mode = false
 local was_ontop = false
 local window_was_fullscreen = state.fullscreen
 local window_had_borders = state.border
-local pip_autofit = "33%"
+local pip_autofit = "30%"
 local standard_autofit = "70%"
 
 
