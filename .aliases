@@ -10,3 +10,10 @@ alias dfh="df -Tha --total"
 
 # Reload shell.
 alias reload="exec $SHELL -l"
+
+# Mirror device
+alias cast="nohup scrcpy --window-borderless --disable-screensaver --hid-keyboard --window-title=cloud --turn-screen-off &"
+
+alias wireless-cast="nohup scrcpy --window-borderless --tcpip --disable-screensaver --hid-keyboard --window-title=cloud --turn-screen-off &"
+
+# adb shell ip route | awk '{print $9}' - get phone ip
