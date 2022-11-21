@@ -4,14 +4,14 @@ local state = {
 }
 
 mp.observe_property("fullscreen", "bool",
-function(name, val)
-    state.fullscreen = val
+function(name, value)
+    state.fullscreen = value
 end
 )
 
 mp.observe_property("border", "bool",
-function(name, val)
-    state.border = val
+function(name, value)
+    state.border = value
 end
 )
 
