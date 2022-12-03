@@ -2,11 +2,15 @@
 # --downloader aria2c --downloader-args aria2c:'-c -j 3 -x 3 -s 3 -k 1M'
 --downloader aria2c
 
+# Embed subtitles in the video (only for mp4, webm and mkv videos)
+--embed-subs
+
 # SponsorBlock categories to create chapters
 --sponsorblock-mark all
 
-# Select file with mp4 extension
--f "[ext=mp4]"
+# Download the best video with the best extension
+# (For video, mp4 > webm > flv. For audio, m4a > aac > mp3 ...)
+-S "ext"
 
 # Download the video with the largest resolution no better than 720p,
 # or the video with the smallest resolution available if there is no such video,
@@ -15,4 +19,3 @@
 
 # Save all videos under YouTube directory in your home directory
 -o ~/Videos/yt-dlp/%(title)s.%(ext)s
-
