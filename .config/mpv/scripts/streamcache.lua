@@ -20,7 +20,7 @@
 --    in addition to "cache-secs" seconds of cache
 
 -- Configurable parameters:
-streamcache_seconds_aim = 30
+streamcache_seconds_aim = 60
 streamcache_slack = 10
 streamcache_min_speed = 0.98
 streamcache_adjust_factor = 1.0005
