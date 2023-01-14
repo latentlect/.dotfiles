@@ -5,12 +5,9 @@ tree
 ffmpeg
 rsync
 cmake
-neofetch
 timeshift
 p7zip-full
 mpv
-virtualbox
-stacer
 gparted
 htop
 gnome-tweaks
@@ -19,7 +16,6 @@ python3-pip
 bat
 fd-find
 xclip
-xtrlock
 nodejs
 npm
 tmux
