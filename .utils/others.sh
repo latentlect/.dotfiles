@@ -52,7 +52,7 @@ download_nerdfonts(){
 
 
 # enable usb support in virutalbox
-command -v virtualbox > /dev/null && sudo adduser $USER vboxusers
+# command -v virtualbox > /dev/null && sudo adduser $USER vboxusers
 
 
 install_vscode(){
