@@ -38,6 +38,13 @@ install_auto_cpufreq(){
 	fi
 }
 
+# slimbook battery optimizer
+install_slimbook_battery_optimizer(){
+    sudo add-apt-repository ppa:slimbook/slimbook -y
+````sudo apt-get update -y
+    sudo apt-get install slimbookbattery -y
+}
+
 
 download_nerdfonts(){
 	mkdir -p "$HOME/.local/share/fonts/nerdfonts"
@@ -147,6 +154,6 @@ install_vscode
 # install_lvim
 # install_auto_cpufreq
 # auto_cpufreq replaced with Slimbook battery
-echo "Download Slimbook Battery .deb file here: https://github.com/slimbook/slimbookbattery/releases"
-echo "Run command: sudo apt install ./slimbookbattery_4.0.0_all.deb"
-
+# echo "Download Slimbook Battery .deb file here: https://github.com/slimbook/slimbookbattery/releases"
+# echo "Run command: sudo apt install ./slimbookbattery_4.0.0_all.deb"
+install_slimbook_battery_optimizer
