@@ -41,10 +41,28 @@ install_auto_cpufreq(){
 # slimbook battery optimizer
 install_slimbook_battery_optimizer(){
     sudo add-apt-repository ppa:slimbook/slimbook -y
-````sudo apt-get update -y
+    sudo apt-get update -y
     sudo apt-get install slimbookbattery -y
 }
 
+# onlyoffice
+install_onlyoffice(){
+    # Remove libreoffice using bash terminal: sudo apt-get purge libre* -y
+    mkdir -p -m 700 ~/.gnupg
+    gpg --no-default-keyring --keyring gnupg-ring:/tmp/onlyoffice.gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys CB2DE8E5
+    chmod 644 /tmp/onlyoffice.gpg
+    sudo chown root:root /tmp/onlyoffice.gpg
+    sudo mv /tmp/onlyoffice.gpg /usr/share/keyrings/onlyoffice.gpg
+
+    echo 'deb [signed-by=/usr/share/keyrings/onlyoffice.gpg] https://download.onlyoffice.com/repo/debian squeeze main' | sudo tee -a /etc/apt/sources.list.d/onlyoffice.list
+
+    sudo apt-get update -y
+
+    sudo apt-get install onlyoffice-desktopeditors -y
+
+    # Remove onlyoffice
+    # sudo apt-get purge onlyoffice-desktopeditors -y
+}
 
 download_nerdfonts(){
 	mkdir -p "$HOME/.local/share/fonts/nerdfonts"
@@ -75,8 +93,8 @@ install_vscode(){
 		sudo apt install -y code
 
 		# uninstall vscode
-		# sudo apt-get remove code
-		# remov all user settings
+		# sudo apt-get purge code
+		# remove all user settings
 		# rm -rf ~/.config/Code
 		# rm -rf ~/.vscode
 	fi
