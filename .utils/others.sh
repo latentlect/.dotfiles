@@ -142,7 +142,11 @@ setup_tmux(){
 install_fzf
 download_nerdfonts
 install_vscode
-setup_tmux
+# setup_tmux
 # install_neovim
 # install_lvim
-install_auto_cpufreq
+# install_auto_cpufreq
+# auto_cpufreq replaced with Slimbook battery
+echo "Download Slimbook Battery .deb file here: https://github.com/slimbook/slimbookbattery/releases"
+echo "Run command: sudo apt install ./slimbookbattery_4.0.0_all.deb"
+
